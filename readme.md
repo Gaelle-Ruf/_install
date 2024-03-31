@@ -45,6 +45,20 @@ git commit -m "[NEW] first commit"
 - Change master to main : `git branch - m master main`
 - `git push -u origin main`
 
+## Create Submodule for _install
+```sh
+cd /project name
+cp -r _install _install_backup
+git rm --cached _install -r
+git commit -m "[FIX] take off install from index to prepare it as a submodule"
+git submodule add git@github.com:Gaelle-Ruf/_install.git _install
+rm -rf _install
+mv _install_backup _install
+git add .gitmodules _install
+git commit -m "[FIX] add install as a submodule and content ok"
+git push
+```
+
 ## Submodule _install
 - When _install has changed :
 ```sh
