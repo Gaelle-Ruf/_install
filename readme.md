@@ -27,6 +27,29 @@ sh install.sh
 - Launch command `sh install.sh`
 
 ## Misc informations
+
 - By default, Wordpress site will be installed in a `public` subfolder
 - You can edit default options in the `include/configuration.default.sh` file
 - `configuration.sh` file is ignored by git
+
+## Link Github
+
+```sh
+cd /project name
+git init
+git add .
+git commit -m "[NEW] first commit"
+```
+- Create a new repo on Github (don't initialize)
+- Copy line : git remote add origin git@github.com:Gaelle-Ruf/..........git
+- Change master to main : `git branch - m master main`
+- `git push -u origin main`
+
+## Submodule _install
+- When _install has changed :
+```sh
+cd /project name
+git add _install
+git commit -m "[NEW] update install"
+git push origin main
+```
